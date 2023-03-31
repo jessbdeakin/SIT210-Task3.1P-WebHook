@@ -122,7 +122,7 @@ void loop() {
     if(readSensor()){
         if(checkReadingIntegry(reading)){
             
-            Particle.publish("jess", String::format(
+            Particle.publish("temphumid_reading", String::format(
                 "{\"humidity\": %f, \"temperature\": %f}",
                 partsToFloatingPoint(reading.humidityIntegral, reading.humidityDecimal),
                 partsToFloatingPoint(reading.temperatureIntegral, reading.temperatureDecimal)
